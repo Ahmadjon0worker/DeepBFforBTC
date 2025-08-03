@@ -1,0 +1,37 @@
+{
+  "server": {
+    "port": 5000,
+    "host": "0.0.0.0",
+    "debug": false
+  },
+  "generation": {
+    "request_delay": 0.5,
+    "max_workers": 4,
+    "batch_size": 10,
+    "max_console_lines": 2000,
+    "auto_save_interval": 100
+  },
+  "files": {
+    "wallet_file": "btc_wallets.txt",
+    "database_file": "wallets.db",
+    "log_file": "generator.log",
+    "config_file": "config.json"
+  },
+  "telegram": {
+    "token": "8179575092:AAF8neI5SRmghulxlyjuKTVDEutqnHcPURI",
+    "chat_id": "7521446360",
+    "enabled": true
+  },
+  "apis": {
+    "primary": "https://blockchain.info/balance?active=",
+    "secondary": "https://blockstream.info/api/address/",
+    "backup": "https://api.blockcypher.com/v1/btc/main/addrs/",
+    "timeout": 15,
+    "retry_count": 3
+  },
+  "wallet_types": {
+    "legacy": true,
+    "segwit": true,
+    "bech32": true
+  }
+}
